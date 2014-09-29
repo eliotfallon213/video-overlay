@@ -1,0 +1,13 @@
+        <div data-fade="1" ng-model="tabs.activeTab" bs-tabs>
+            <div ng-repeat="tab in tabs" data-title="{{tab.title}}"><p>{{tab.content}}</p></div>
+          </div>
+          <hr>
+          <div class="well">
+            <code>tabs.activeTab=<span>{{tabs.activeTab}}</span></code>
+            <div class="btn-group" ng-model="tabs.activeTab" bs-buttons-radio>
+              <button type="button" class="btn btn-primary" value="0">First</button>
+              <button type="button" class="btn btn-primary" value="1">Second</button>
+              <button type="button" class="btn btn-primary" value="2">Third</button>
+            </div>
+          </div>
+        </div>

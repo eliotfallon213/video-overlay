@@ -1,0 +1,18 @@
+
+<h1>Picture URL:</h1>
+<p>
+    Image URL:<input type="text" name="ImageURL" ng-model="imageURL" /><br />
+    Facebook ID:<input type="text" name="facebookID" ng-model="facebookID" />
+</p>
+<h1>Picture:</h1>
+<div map-view></div>
+<div class="control-container">
+    <h2>Zoom:</h2>
+    <div class="slider" input-slider slider-init="0.5" slider-model="zoomLevel" ></div>
+</div><br />
+<div class="control-container">
+    <h2>Rotate:</h2>
+    <div class="slider" input-slider slider-init="0.5" slider-model="rotationAmount" ></div>
+</div>
+<a ng-click="reset()">RESET</a>
+<a ng-click="saveCurrentFace()">SAVE</a>

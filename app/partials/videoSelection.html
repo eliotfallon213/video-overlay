@@ -1,0 +1,14 @@
+
+<h1>Select a video:</h1>
+<div>
+    <ul>
+        <li ng-repeat="video in videos">
+            <p>{{video.title}}</p>
+            <p>No. of heads: {{video.heads}}</p>
+            <p ng-click="previewVideo(video)">Preview video</p>
+            <a ng-show="videoDetails.facebookID" ng-click="selectVideo(video)">
+                <img ng-src="{{video.stillImage}}" />
+            </a>
+        </li>
+    </ul>
+</div>

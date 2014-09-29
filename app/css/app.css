@@ -1,0 +1,114 @@
+/* app css stylesheet */
+.column1 {
+    float: left;
+    width: 150px;
+    margin-bottom: 20px;
+}
+.column2 {
+    float: left;
+    margin-bottom: 20px;
+}
+
+.mapHolder {
+    float: left;
+}
+.control-column { 
+    float: right;
+    width: 200px;
+    margin-left: 40px;
+}
+.button-container {
+    clear: right;
+    float: right;
+    margin-top: 40px;
+}
+
+.button-container a {
+    margin: 0 20px;
+}
+
+.send {
+    clear: both;
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+
+
+/* Sliders */
+
+.slider {
+	border: 1px solid #3a3a3a;
+	float: left;
+	width: 250px;
+        height: 14px;
+        margin-top: 17px;
+}
+.slider-inner {
+	background: -webkit-gradient(linear, 0% 0%, 0% 50%, from(#313131), to(#272727), color-stop(1,#272727));
+	background:   -webkit-linear-gradient(0% 0% 270deg,#313131, #272727, #272727 100%);
+	background:    	 -moz-linear-gradient(0% 0% 270deg,#313131, #272727, #272727 100%);
+	background:       -ms-linear-gradient(0% 0% 270deg,#313131, #272727, #272727 100%);
+	background:        -o-linear-gradient(0% 0% 270deg,#313131, #272727, #272727 100%);
+	background:           linear-gradient(0% 0% 270deg,#313131, #272727, #272727 100%);
+	-webkit-box-shadow: 0px 2px 1px 0px #000000 inset;
+	-moz-box-shadow:    0px 2px 1px 0px #000000 inset;
+	-o-box-shadow:      0px 2px 1px 0px #000000 inset;
+	-ms-box-shadow:     0px 2px 1px 0px #000000 inset;
+	box-shadow: 		0px 2px 1px 0px #000000 inset;
+}
+.slider-inner-left {
+        background: #635201;
+	background: -webkit-gradient(linear, 0% 0%, 0% 50%, from(#7C6B1A), to(#635201), color-stop(1,#635201));
+	background:   -webkit-linear-gradient(0% 0% 270deg,#7C6B1A, #635201, #635201 100%);
+	background:    	 -moz-linear-gradient(0% 0% 270deg,#7C6B1A, #635201, #635201 100%);
+	background:       -ms-linear-gradient(0% 0% 270deg,#7C6B1A, #635201, #635201 100%);
+	background:        -o-linear-gradient(0% 0% 270deg,#7C6B1A, #635201, #635201 100%);
+	background:           linear-gradient(0% 0% 270deg,#7C6B1A, #635201, #635201 100%);
+	-webkit-box-shadow: 0px 2px 1px 0px #000000 inset;
+	-moz-box-shadow:    0px 2px 1px 0px #000000 inset;
+	-o-box-shadow:      0px 2px 1px 0px #000000 inset;
+	-ms-box-shadow:     0px 2px 1px 0px #000000 inset;
+	box-shadow: 		0px 2px 1px 0px #000000 inset;
+}
+.slider-inner-button {
+	width: 14px;
+	height: 22px; 
+	background: -320px -4px no-repeat red;
+	cursor: pointer;
+}
+
+#mapHolder {
+    height: 600px;
+    width: 600px;
+    overflow: hidden;
+}
+
+.face-selection ul li { float: left;}

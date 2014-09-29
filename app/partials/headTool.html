@@ -1,0 +1,57 @@
+<h2>When all heads are saved you will be able to create the video.</h2>
+<div class="column1">
+    <ul ng-repeat="head in videoDetails.heads">
+        <li ng-class="" ng-click="changeTabs(head.headID)"><a href="#/headTool/{{head.headID}}">Head {{head.headID}} <span ng-show="head.saved"> - saved</span><span ng-hide="head.saved"> - unsaved</span></a></li>
+    </ul>
+</div>
+<div class="column2">
+    <div>
+        <div class="go-back" ng-click="goBack()">Go Back</div>
+        <div class="FB-interaction" ng-show="head.imageURL==''">
+            <div ng-hide="selectedAlbum" class="album-selection">
+                <h2>Choose a Facebook ablum to use for Head {{head.headID}}:</h2>
+                <ul>
+                    <li ng-repeat="album in albums.albums.data" ng-click="selectAlbum(album.id)">{{album.name}}</li>
+                </ul>
+            </div>
+            <div ng-show="selectedAlbum" class="photo-selection">
+                <h2>Choose a Facebook photo to use for Head {{head.headID}}:</h2>
+                <ul>
+                    <li ng-repeat="photo in photos.data" ng-click="selectPhoto(photo)"><img ng-src="{{photo.picture}}" /></li>
+                </ul>
+            </div>
+            <div class="face-selection">
+                <h2>Choose a previously created face:</h2>
+                <ul>
+                    <li ng-repeat="createdHead in preCreatedHeads" ng-click="selectPreFace(head.headID, createdHead.id)"><img ng-src="/JimBeamAPI/createdImages/{{createdHead.imageFile}}" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="head-tool-container" ng-hide="head.imageURL==''">
+            <h2>Cut out the head using the tools below:</h2>
+            <div headtool="videoDetails.heads[head.headID]" class="mapHolder"></div>
+            <div class="control-column">
+                <div class="control-container">
+                    <h2>Zoom:</h2>
+                    <div class="slider" input-slider slider-init="0.5" slider-model="videoDetails.heads[currentHeadID].zoomLevel" ></div>
+                </div><br />
+                <div class="control-container">
+                    <h2>Rotate:</h2>
+                    <div class="slider" input-slider slider-init="0.5" slider-model="videoDetails.heads[currentHeadID].rotationAmount" ></div>
+                </div>
+            </div>
+            <div class="button-container">
+                <a ng-click="reset(head.headID)">RESET</a>
+                <a ng-click="saveCurrentFace(head.headID)">SAVE HEAD</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="send" ng-show='readyToCreate'>
+    <h2>Click below to save the video:</h2>
+    <a href="#/userDetails" ng-click="createVideo()">CREATE VIDEO</a>
+</div>
+
+
+

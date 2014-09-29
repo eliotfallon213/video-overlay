@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="LimeApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Jim Beam Lime Splash</title>
+        <link rel="stylesheet" href="css/app.css"/>
+        <link rel="stylesheet" href="css/projekktor/theme/maccaco/projekktor.style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/colorbox/colorbox.css" />
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+        <div id="fb-root"></div>
+        <div ng-view></div>
+
+        <!-- Facebook -->
+        <script src="http://connect.facebook.net/en_US/all.js"></script>
+        <script>
+            FB.init({
+                // dev
+                //appId: '175338975986059',
+                // staging 
+                appId: 634914019873215,
+                status: true,
+                cookie: true,
+                xfbml: true,
+                oauth  : true
+            });
+        </script>
+
+        <!-- Bootstrap -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap/bootstrap.js"></script>
+        <script src="js/colorbox/jquery.colorbox.js"></script>
+
+        <!-- Raphael -->
+        <script src="js/Raphael/raphael-uncomp.js" type="text/javascript"></script>
+        <!-- Projekktor -->
+        <script src="js/projekktor/projekktor-1.2.38r332.min.js" type="text/javascript"></script>
+        
+        <!-- AddThis -->
+        <script type="text/javascript">var addthis_config = {"data_track_clickback": false};</script>
+        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-512785201da28d11"></script>
+        <!-- AddThis -->
+
+        <!-- Angular JS -->
+        <!-- In production use:
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        -->
+        <script src="lib/angular/angular.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/directives.js"></script>
+        <script type="text/javascript" src="lib/angular/angular-resource.js"></script>
+    </body>
+</html>

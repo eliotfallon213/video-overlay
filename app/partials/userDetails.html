@@ -1,0 +1,19 @@
+<div ng-show="loading" class="loading"><img src="img/ajax-loader.gif" alt="Loading" /></div>
+<form ng-show="!prevUser && !loading" name="form" class="css-form" novalidate>
+    Name:
+    <input type="text" ng-model="user.name" name="uName" required /><br />
+    E-mail:
+    <input type="email" ng-model="user.email" name="uEmail" required/><br />
+    <div ng-show="form.uEmail.$dirty && form.uEmail.$invalid">Invalid:
+        <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+        <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+    </div>
+
+    <button ng-click="reset()" ng-disabled="isUnchanged(user)">RESET</button>
+    <button ng-click="update(user)"
+            ng-disabled="form.$invalid || isUnchanged(user)">SAVE</button>
+</form>
+<div ng-show="prevUser && !loading" >
+    <h2>You have already applied for your free voucher.</h2>
+    <a href="#/viewVideo"><h2>Click here to move on to your video>>></h2></a>
+</div>
